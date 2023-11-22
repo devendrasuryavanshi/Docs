@@ -18,25 +18,6 @@ Tailwind CSS is a utility-first CSS framework that enables developers to rapidly
 
 To start using Tailwind CSS, you can follow the installation guide provided in the [official documentation](https://tailwindcss.com/docs/installation). Below are the basic steps:
 
-////////////////////////////////////////////////////////////
-
-# Tailwind CSS: A Comprehensive Guide
-
-## What is Tailwind CSS?
-
-Tailwind CSS is a utility-first CSS framework that allows developers to rapidly build modern websites without leaving the HTML file. Unlike traditional CSS frameworks that provide predefined components, Tailwind CSS focuses on providing utility classes that can be directly applied to HTML elements. This approach, known as "utility-first," simplifies the process of styling and reduces the need for writing custom CSS.
-
-### Key Concepts
-
-- **Utility-first:** The framework's main focus is on providing utility classes, making it easier to style elements directly in the HTML file.
-  
-- **Reduces confusion:** By using utility classes, developers can avoid the need to create and manage custom CSS rules for styling.
-  
-- **Bundle size:** Tailwind CSS allows developers to include only the styles they need, reducing the overall size of the CSS bundle.
-
-## Installation
-
-To get started with Tailwind CSS, you can follow the installation steps provided in the [official documentation](https://tailwindcss.com/docs/installation). Below is a brief overview:
 
 ### CDN Link (Not for Production)
 
