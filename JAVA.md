@@ -155,3 +155,196 @@ Java code undergoes a two-step process: compilation and interpretation.
 - **Interpretation:** The Java Virtual Machine (JVM) interprets the bytecode and executes it. This allows Java programs to be platform-independent.
 
 ---
+
+
+## 12. Types of Operators
+
+Operators in Java are symbols that perform operations on operands. They can be classified into various types based on their functionality.
+
+### 12.1 Arithmetic Operators
+
+Arithmetic operators perform basic mathematical operations. They include addition (`+`), subtraction (`-`), multiplication (`*`), division (`/`), and modulus (`%`). 
+
+#### Example:
+
+```java
+// Arithmetic Operators
+public class ArithmeticOperatorsExample {
+    public static void main(String[] args) {
+        int a = 10, b = 3;
+        
+        int sum = a + b;          // 13
+        int difference = a - b;    // 7
+        int product = a * b;       // 30
+        int quotient = a / b;      // 3
+        int remainder = a % b;     // 1
+    }
+}
+```
+
+### 12.2 Unary Operators
+
+Unary operators operate on a single operand. Examples include the unary plus (`+`), unary minus (`-`), increment (`++`), and decrement (`--`). 
+
+#### Example:
+
+```java
+// Unary Operators
+public class UnaryOperatorsExample {
+    public static void main(String[] args) {
+        int x = 5;
+        
+        int result1 = +x;   // Unary plus: result1 = 5
+        int result2 = -x;   // Unary minus: result2 = -5
+        int result3 = ++x;  // Increment: result3 = 6
+        int result4 = --x;  // Decrement: result4 = 5
+    }
+}
+```
+
+### 12.3 Relational Operators
+
+Relational operators compare two values and return a boolean result. They include equality (`==`), inequality (`!=`), greater than (`>`), less than (`<`), greater than or equal to (`>=`), and less than or equal to (`<=`). 
+
+#### Example:
+
+```java
+// Relational Operators
+public class RelationalOperatorsExample {
+    public static void main(String[] args) {
+        int a = 5, b = 8;
+        
+        boolean isEqual = (a == b);             // false
+        boolean isNotEqual = (a != b);          // true
+        boolean isGreaterThan = (a > b);        // false
+        boolean isLessThan = (a < b);           // true
+        boolean isGreaterOrEqual = (a >= b);    // false
+        boolean isLessOrEqual = (a <= b);       // true
+    }
+}
+```
+
+### 12.4 Logical Operators
+
+Logical operators perform logical operations on boolean values. They include AND (`&&`), OR (`||`), and NOT (`!`). Understanding how these operators work is essential for controlling the flow of your program based on different conditions.
+
+#### Logical AND (`&&`)
+
+The logical AND operator (`&&`) returns `true` if both operands are `true`, otherwise, it returns `false`. This operator is often used to combine two or more conditions.
+
+##### Example:
+
+```java
+// Logical AND Operator
+public class LogicalAndExample {
+    public static void main(String[] args) {
+        int age = 25;
+        boolean isStudent = true;
+
+        // Check if the person is a student and under 30 years old
+        boolean isYoungStudent = isStudent && (age < 30);
+        System.out.println("Is a young student: " + isYoungStudent);
+    }
+}
+```
+
+#### Logical OR (`||`)
+
+The logical OR operator (`||`) returns `true` if at least one of the operands is `true`. It returns `false` only if both operands are `false`. It is often used to create more flexible conditions.
+
+##### Example:
+
+```java
+// Logical OR Operator
+public class LogicalOrExample {
+    public static void main(String[] args) {
+        int temperature = 28;
+        boolean isSummer = true;
+
+        // Check if it's either summer or the temperature is above 30 degrees
+        boolean isHotDay = isSummer || (temperature > 30);
+        System.out.println("Is a hot day: " + isHotDay);
+    }
+}
+```
+
+#### Logical NOT (`!`)
+
+The logical NOT operator (`!`) negates the value of its operand. If the operand is `true`, the result is `false`, and vice versa. It is often used to reverse a condition.
+
+##### Example:
+
+```java
+// Logical NOT Operator
+public class LogicalNotExample {
+    public static void main(String[] args) {
+        boolean isSunny = true;
+
+        // Check if it's not sunny
+        boolean isNotSunny = !isSunny;
+        System.out.println("Is not sunny: " + isNotSunny);
+    }
+}
+```
+
+Logical operators play a crucial role in decision-making within Java programs. They help create conditions that guide the program's execution based on the evaluation of boolean expressions.
+
+### 12.5 Assignment Operators
+
+Assignment operators assign values to variables. They include simple assignment (`=`) and compound assignment (`+=`, `-=`, `*=`, `/=`, `%=`).
+
+#### Example:
+
+```java
+// Assignment Operators
+public class AssignmentOperatorsExample {
+    public static void main(String[] args) {
+        int x = 5;
+        
+        x += 3;  // Equivalent to x = x + 3;  // x = 8
+        x -= 2;  // Equivalent to x = x - 2;  // x = 6
+        x *= 4;  // Equivalent to x = x * 4;  // x = 24
+        x /= 2;  // Equivalent to x = x / 2;  // x = 12
+        x %= 3;  // Equivalent to x = x % 3;  // x = 0
+    }
+}
+```
+
+## 13. Operator Precedence
+
+Operator precedence determines the order in which operators are evaluated in an expression. It is crucial to understand the precedence to avoid unexpected results.
+
+### 13.1 Operator Precedence Levels
+
+1. Postfix: `expr++`, `expr--`
+2. Unary: `++expr`, `--expr`, `+expr`, `-expr`, `!expr`, `~expr`
+3. Multiplicative: `*`, `/`, `%`
+4. Additive: `+`, `-`
+5. Shift: `<<`, `>>`, `>>>`
+6. Relational: `<`, `<=`, `>`, `>=`
+7. Equality: `==`, `!=`
+8. Bitwise AND: `&`
+9. Bitwise XOR: `^`
+10. Bitwise OR: `|`
+11. Logical AND: `&&`
+12. Logical OR: `||`
+13. Conditional (Ternary): `? :`
+14. Assignment: `=`, `+=`, `-=`, `*=`, `/=`, `%=` and others
+
+### 13.2 Examples
+
+Understanding operator precedence is crucial to writing correct and efficient Java expressions. Ensure to use parentheses to explicitly control the order of evaluation when needed.
+
+#### Example:
+
+```java
+// Operator Precedence Examples
+public class OperatorPrecedenceExample {
+    public static void main(String[] args) {
+        int result = 5 + 3 * 2;  // Multiplication has higher precedence than addition: result = 11
+        boolean condition = (result > 10) && (result % 2 == 0);  // Logical AND has higher precedence than logical OR
+    }
+}
+```
+
+---
