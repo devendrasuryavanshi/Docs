@@ -348,3 +348,186 @@ public class OperatorPrecedenceExample {
 ```
 
 ---
+
+
+# Java Programming Language: Detailed Notes (Continued)
+
+## 14. Conditional Statements
+
+Conditional statements in Java allow the execution of different code blocks based on specified conditions. They enable your program to make decisions and choose different paths of execution.
+
+### 14.1 `if` Statement
+
+The `if` statement is the most basic form of a conditional statement. It executes a block of code if the specified condition is true.
+
+#### Example:
+
+```java
+// If Statement
+public class IfStatementExample {
+    public static void main(String[] args) {
+        int x = 10;
+
+        if (x > 5) {
+            System.out.println("x is greater than 5");
+        }
+    }
+}
+```
+
+### 14.2 `if-else` Statement
+
+The `if-else` statement extends the `if` statement by providing an alternative block of code to execute when the condition is false.
+
+#### Example:
+
+```java
+// If-Else Statement
+public class IfElseStatementExample {
+    public static void main(String[] args) {
+        int x = 3;
+
+        if (x % 2 == 0) {
+            System.out.println("x is even");
+        } else {
+            System.out.println("x is odd");
+        }
+    }
+}
+```
+
+### 14.3 `else if` Statement
+
+The `else if` statement allows the testing of multiple conditions. It is useful when there are more than two possible outcomes.
+
+#### Example:
+
+```java
+// Else If Statement
+public class ElseIfStatementExample {
+    public static void main(String[] args) {
+        int dayOfWeek = 3;
+
+        if (dayOfWeek == 1) {
+            System.out.println("It's Monday");
+        } else if (dayOfWeek == 2) {
+            System.out.println("It's Tuesday");
+        } else if (dayOfWeek == 3) {
+            System.out.println("It's Wednesday");
+        } else {
+            System.out.println("It's another day");
+        }
+    }
+}
+```
+
+### 14.4 Ternary Operator (`? :`)
+
+The ternary operator is a concise way to write simple `if-else` statements in a single line. It evaluates a boolean expression and returns one of two values based on whether the expression is true or false.
+
+#### Example:
+
+```java
+// Ternary Operator
+public class TernaryOperatorExample {
+    public static void main(String[] args) {
+        int x = 7;
+        String result = (x % 2 == 0) ? "Even" : "Odd";
+        System.out.println("Number is " + result);
+    }
+}
+```
+
+## 15. Switch Statement
+
+The `switch` statement provides a way to handle multiple conditions based on the value of an expression. It's particularly useful when there are several possible values for a variable.
+
+### 15.1 Basic Switch Statement
+
+The basic form of the `switch` statement compares the value of an expression against different cases and executes the corresponding block of code.
+
+#### Example:
+
+```java
+// Switch Statement
+public class SwitchStatementExample {
+    public static void main(String[] args) {
+        int dayOfWeek = 2;
+
+        switch (dayOfWeek) {
+            case 1:
+                System.out.println("It's Monday");
+                break;
+            case 2:
+                System.out.println("It's Tuesday");
+                break;
+            case 3:
+                System.out.println("It's Wednesday");
+                break;
+            default:
+                System.out.println("It's another day");
+        }
+    }
+}
+```
+
+### 15.2 Switch Statement with Fall-Through
+
+In a `switch` statement, each `case` typically ends with a `break` statement. However, fall-through behavior allows the execution to continue into the next case without a `break`.
+
+#### Example:
+
+```java
+// Switch Statement with Fall-Through
+public class SwitchFallThroughExample {
+    public static void main(String[] args) {
+        int dayOfWeek = 3;
+
+        switch (dayOfWeek) {
+            case 1:
+                System.out.println("It's Monday");
+                // Fall-through
+            case 2:
+                System.out.println("It's a weekday");
+                break;
+            case 3:
+            case 4:
+            case 5:
+                System.out.println("It's a workday");
+                break;
+            default:
+                System.out.println("It's another day");
+        }
+    }
+}
+```
+
+### 15.3 Switch Statement with Strings (Java 7+)
+
+Starting from Java 7, the `switch` statement supports strings, allowing you to switch on the value of a string expression.
+
+#### Example:
+
+```java
+// Switch Statement with Strings
+public class SwitchStringExample {
+    public static void main(String[] args) {
+        String day = "Wednesday";
+
+        switch (day) {
+            case "Monday":
+                System.out.println("It's the first day of the week");
+                break;
+            case "Wednesday":
+                System.out.println("It's the middle of the week");
+                break;
+            default:
+                System.out.println("It's another day");
+        }
+    }
+}
+```
+
+Conditional statements and the `switch` statement are powerful tools for controlling the flow of your Java programs. They allow you to create flexible and dynamic logic based on various conditions and values. Understanding their usage is essential for effective programming in Java.
+
+---
