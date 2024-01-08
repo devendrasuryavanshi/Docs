@@ -350,8 +350,6 @@ public class OperatorPrecedenceExample {
 ---
 
 
-# Java Programming Language: Detailed Notes (Continued)
-
 ## 14. Conditional Statements
 
 Conditional statements in Java allow the execution of different code blocks based on specified conditions. They enable your program to make decisions and choose different paths of execution.
