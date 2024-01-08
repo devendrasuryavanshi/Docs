@@ -529,3 +529,222 @@ public class SwitchStringExample {
 Conditional statements and the `switch` statement are powerful tools for controlling the flow of your Java programs. They allow you to create flexible and dynamic logic based on various conditions and values. Understanding their usage is essential for effective programming in Java.
 
 ---
+
+
+## 16. Loops
+
+Loops in Java are used to repeatedly execute a block of code until a specified condition is met. They provide a powerful mechanism for performing repetitive tasks.
+
+### 16.1 `while` Loop
+
+The `while` loop repeatedly executes a block of code as long as a specified condition is true.
+
+#### Code:
+
+```java
+// While Loop
+public class WhileLoopExample {
+    public static void main(String[] args) {
+        int i = 1;
+
+        while (i <= 5) {
+            // Code to be repeated
+            System.out.println("Iteration: " + i);
+
+            // Increment the loop counter
+            i++;
+        }
+    }
+}
+```
+
+#### Pseudocode:
+
+```
+Initialize counter variable i to 1
+
+while (i <= 5) {
+    // Code to be repeated
+    Print "Iteration: i"
+
+    // Increment the loop counter
+    i++
+}
+```
+
+### 16.2 `for` Loop
+
+The `for` loop provides a compact way to iterate over a range of values.
+
+#### Code:
+
+```java
+// For Loop
+public class ForLoopExample {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 5; i++) {
+            // Code to be repeated
+            System.out.println("Iteration: " + i);
+        }
+    }
+}
+```
+
+#### Pseudocode:
+
+```
+for (Initialize counter variable i to 1; 
+     Continue loop as long as i is less than or equal to 5;
+     Increment the loop counter i by 1) {
+    // Code to be repeated
+    Print "Iteration: i"
+}
+```
+
+### 16.3 `do-while` Loop
+
+The `do-while` loop is similar to the `while` loop, but it always executes the block of code at least once, even if the condition is false.
+
+#### Code:
+
+```java
+// Do-While Loop
+public class DoWhileLoopExample {
+    public static void main(String[] args) {
+        int i = 1;
+
+        do {
+            // Code to be repeated
+            System.out.println("Iteration: " + i);
+
+            // Increment the loop counter
+            i++;
+        } while (i <= 5);
+    }
+}
+```
+
+#### Pseudocode:
+
+```
+Initialize counter variable i to 1
+
+do {
+    // Code to be repeated
+    Print "Iteration: i"
+
+    // Increment the loop counter
+    i++
+} while (i <= 5)
+```
+
+### 16.4 `break` Statement
+
+The `break` statement is used to exit a loop prematurely based on a specified condition.
+
+#### Code:
+
+```java
+// Break Statement in a Loop
+public class BreakStatementExample {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 5; i++) {
+            // Code to be repeated
+            System.out.println("Iteration: " + i);
+
+            // Break out of the loop if a condition is met
+            if (i == 3) {
+                break;
+            }
+        }
+    }
+}
+```
+
+#### Pseudocode:
+
+```
+for (Initialize counter variable i to 1; 
+     Continue loop as long as i is less than or equal to 5;
+     Increment the loop counter i by 1) {
+    // Code to be repeated
+    Print "Iteration: i"
+
+    // If i is equal to 3, break out of the loop
+    if (i == 3) {
+        Break out of the loop
+    }
+}
+```
+
+### 16.5 `continue` Statement
+
+The `continue` statement is used to skip the rest of the code inside a loop for the current iteration and move to the next iteration.
+
+#### Code:
+
+```java
+// Continue Statement in a Loop
+public class ContinueStatementExample {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 5; i++) {
+            // Skip the rest of the code for even iterations
+            if (i % 2 == 0) {
+                continue;
+            }
+
+            // Code to be repeated for odd iterations
+            System.out.println("Iteration: " + i);
+        }
+    }
+}
+```
+
+#### Pseudocode:
+
+```
+for (Initialize counter variable i to 1; 
+     Continue loop as long as i is less than or equal to 5;
+     Increment the loop counter i by 1) {
+    // If i is an even number, skip the rest of the code for this iteration
+    if (i is even) {
+        Continue to the next iteration
+    }
+
+    // Code to be repeated for odd iterations
+    Print "Iteration: i"
+}
+```
+
+### 16.6 Choosing the Right Loop
+
+- **`while` Loop:** Use when the number of iterations is not known beforehand, and the loop condition is checked before each iteration.
+
+- **`for` Loop:** Use when the number of iterations is known beforehand or when iterating over a range of values.
+
+- **`do-while` Loop:** Use when you want the loop block to execute at least once, even if the condition is false.
+
+### 16.7 Loop Control Statements
+
+- **`break` Statement:** Used to exit a loop prematurely, terminating the loop's execution.
+
+- **`continue` Statement:** Used to skip the rest of the code inside a loop for the current iteration and move to the next iteration.
+
+### 16.8 Infinite Loops
+
+An infinite loop is a loop that never terminates. It occurs when the loop condition is always true or when there is no statement that can change the loop condition.
+
+#### Example of Infinite Loop:
+
+```java
+// Infinite Loop
+public class InfiniteLoopExample {
+    public static void main(String[] args) {
+        while (true) {
+            System.out.println("This is an infinite loop");
+        }
+    }
+}
+```
+
+Loops are powerful constructs in Java, offering flexibility and efficiency in handling repetitive tasks. Understanding the different types of loops and their control statements is crucial for writing effective and concise code.
