@@ -329,6 +329,8 @@ div {
 }
 ```
 
+![box model](https://upload.wikimedia.org/wikipedia/en/e/e1/Boxmodel.gif)
+
 ### Display Property
 
 The display property determines how an element is rendered in the document. Common values include `block`, `inline`, and `inline-block`.
@@ -604,6 +606,7 @@ The `align-items` property aligns flex items along the cross axis of the flex co
     align-items: center;
 }
 ```
+![flex](https://cdn-media-1.freecodecamp.org/images/u9tCV-zRt3qpgSyNQt53e-eRz0-HIrsqqOk-)
 
 ### Align Content
 
@@ -645,6 +648,8 @@ The `flex` shorthand property combines the `flex-grow`, `flex-shrink`, and `flex
 }
 ```
 
+![flex](https://assets.digitalocean.com/articles/alligator/css/improve-responsiveness-flex-wrap/flex-wrap-example.gif)
+
 ---
 
 Flexbox provides a powerful and efficient way to create complex layouts with CSS. By understanding its properties and how they interact, you can build responsive and flexible designs for various screen sizes and devices.
@@ -658,6 +663,8 @@ CSS Grid Layout is a two-dimensional layout system for the web. It allows you to
 ### Grid Model
 
 The grid model consists of rows and columns that intersect to create a grid layout. Elements are placed within grid cells.
+
+![grid](https://miro.medium.com/v2/resize:fit:1358/1*Y33JXOydxbdVUGEc3Cq3Yw.gif)
 
 ### Grid Template
 
@@ -682,6 +689,8 @@ The `repeat()` function in grid-template simplifies the definition of repeated p
 ```
 
 ### Grid Gaps
+
+![grid gap](https://i.stack.imgur.com/1Y8Ue.gif)
 
 The `grid-gap` property sets the gap (space) between rows and columns in a grid layout.
 
@@ -713,6 +722,8 @@ Other grid-related properties include `grid-auto-columns`, `grid-auto-rows`, `gr
     grid-auto-flow: dense;
 }
 ```
+
+![grid container](https://miro.medium.com/v2/resize:fit:1400/1*EW174m7OIIpJwMHkrTW3Xg.gif)
 
 ### Animation in CSS
 
@@ -752,15 +763,86 @@ Percentage values in animations represent the progression of time relative to th
 
 ### Media Queries
 
-Media queries allow you to apply different styles based on the characteristics of the device or browser viewing the page.
+Media queries allow you to apply CSS styles based on various characteristics of the user's device, such as screen size, orientation, and resolution. They are essential for creating responsive designs that adapt to different devices and screen sizes.
+
+#### Syntax
+
+Media queries consist of a media type and one or more expressions that test various conditions.
 
 ```css
 @media screen and (max-width: 768px) {
+    /* CSS styles for screens with a maximum width of 768 pixels */
+}
+```
+
+#### Media Types
+
+- **all**: Applies to all devices.
+- **screen**: Applies to devices with a screen, such as desktops, tablets, and smartphones.
+- **print**: Applies to printed documents.
+- **speech**: Applies to speech synthesizers.
+
+#### Media Features
+
+Media features allow you to test specific characteristics of the user's device.
+
+- **width**: Specifies the width of the viewport.
+- **height**: Specifies the height of the viewport.
+- **orientation**: Specifies the orientation of the device (landscape or portrait).
+- **resolution**: Specifies the resolution of the device's screen.
+- **aspect-ratio**: Specifies the aspect ratio of the viewport.
+
+#### Example: Responsive Design
+
+```css
+/* Default styles */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Media query for tablets */
+@media screen and (max-width: 1024px) {
     .container {
-        grid-template-columns: 1fr;
+        max-width: 800px;
+    }
+}
+
+/* Media query for smartphones */
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 600px;
     }
 }
 ```
+
+In this example, the `.container` element adapts its maximum width based on the device's screen size. On tablets, the maximum width is 800 pixels, and on smartphones, it is 600 pixels. This ensures that the layout remains visually appealing and functional across different devices.
+
+#### Flexible Units in Media Queries
+
+Using relative units like percentages and ems in media queries allows for more flexible and scalable designs.
+
+```css
+@media screen and (max-width: 40em) {
+    /* CSS styles for screens with a maximum width of 40em (responsive to font size changes) */
+}
+```
+
+#### Multiple Media Queries
+
+You can combine multiple media queries to target specific ranges of screen sizes and device characteristics.
+
+```css
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+    /* CSS styles for screens with a width between 600px and 1024px */
+}
+```
+
+![media queries](https://media.giphy.com/media/t4QOOfmnupAqnHcI9H/giphy.gif)
+
+
+Media queries are a powerful tool for creating responsive designs that adapt to various devices and screen sizes. By utilizing media queries effectively, you can ensure that your website looks and functions well across desktops, tablets, smartphones, and other devices.
 
 ### z Index
 
